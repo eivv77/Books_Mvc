@@ -1,22 +1,26 @@
 ﻿using BoolkyBookWeb.Data.Persistence;
 using BoolkyBookWeb.Models;
+using BoolkyBookWeb.Services.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BoolkyBookWeb.Controllers
 {
+
     public class CategoryController : Controller
     {
-        private readonly AppDbContext _db;
+        ICategoryService categoryService;
 
-        public CategoryController(AppDbContext db)
+        public CategoryController(ICategoryService categoryService)
         {
-            _db = db;
+            this.categoryService = categoryService;
         }
 
         public IActionResult Index()
         {
-            IEnumerable<Category> objCategoryList = _db.Categories;
-            return View(objCategoryList);
+            var categories = categoryService.Get(Category.table);
+
+            return View(categories);
         }
+
     }
 }

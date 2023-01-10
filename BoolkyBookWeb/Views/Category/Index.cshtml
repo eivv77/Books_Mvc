@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Category>
+﻿@using System.Data;
+@Model IEnumerable<Category>
 @{
     ViewData["Title"] = "Index";
 }
@@ -15,22 +16,23 @@
         </tr>
       </thead>
       <tbody>
-          @foreach (var obj in Model)
+          @{var dataTable = Model[0].Value;
+                foreach (DataRow obj in dataTable.Rows)
                 {
                     <tr>
                         <td width="50%">
-                            @obj.Id
+                            @obj["Id"]
                         </td>
                         <td width="50%">
-                            @obj.Name
+                            @obj["Name"]
                         </td>
                         <td width="50%">
-                            @obj.DisplayOrder
+                            @obj["DisplayOrder"]
                         </td>
                         <td width="50%">
-                            @obj.CreatedDateTime
+                            @obj["CreatedDateTime"]
                         </td>
                     </tr>
-                }
+                }}
       </tbody>
     </table>

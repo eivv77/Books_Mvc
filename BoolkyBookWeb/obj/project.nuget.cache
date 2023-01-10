@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WSeD2JHhfsZ5USqz7TXrCvIsgSOkpUvv25rUTryGvVh7sGVN95S0qjcPMwRSRZNYFjz4ua2Necl4SynyZ/+tOA==",
+  "dgSpecHash": "x6+fcFqayhJKxMYjYNi6P6L6uv06ESegmQlpIn6EtvdBaGZG2YDVvHWWFdbVwZaAGr0vv+nx//3K0H4RI8/HuA==",
   "success": true,
-  "projectFilePath": "D:\\coding\\c#\\mvc\\BoolkyBook\\BoolkyBookWeb\\BoolkyBookWeb.csproj",
+  "projectFilePath": "E:\\coding\\c#\\mvc\\BoolkyBook\\BoolkyBookWeb\\BoolkyBookWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nurlan.eyvazov\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\nurlan.eyvazov\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
