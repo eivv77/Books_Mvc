@@ -12,6 +12,8 @@ namespace BoolkyBookWeb.Repos
         public DataTable Get(string table)
         {
             string sql = $@"SELECT * FROM [{table}] ";
+
+
             return AppDbContext.Execute(sql);
         }
 

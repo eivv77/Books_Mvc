@@ -13,7 +13,7 @@ namespace BoolkyBookWeb.Data.Persistence
 
         public DbSet<Category> Categories { get; set; }*/
 
-        private static string connectionString = @"Server=TXBBNUEYVAZOV\TXBBNUEYVAZOV;Database=BulkyMvc;Encrypt=false;Trusted_Connection=True;";
+        private static string connectionString = @"Server=TXBBNUEYVAZOV\WORKSTATION;Database=BulkyMvc;Encrypt=false;Trusted_Connection=True;";
         private static SqlConnection? sqlConnection;
         private static SqlCommand? sqlCommand;
 

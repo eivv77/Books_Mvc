@@ -14,6 +14,8 @@ namespace BoolkyBookWeb.Services.Concrete
         }
         public DataTable Get(string table)
         {
+
+
             return repo.Get(table);
         }
         public virtual void Add(TEntity entity, string table, string value)

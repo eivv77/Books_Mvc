@@ -2,6 +2,8 @@
 using BoolkyBookWeb.Models;
 using BoolkyBookWeb.Services.Abstract;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Data;
 
 namespace BoolkyBookWeb.Controllers
 {
@@ -19,7 +21,15 @@ namespace BoolkyBookWeb.Controllers
         {
             var categories = categoryService.Get(Category.table);
 
-            return View(categories);
+            List<Category> catList = categories.AsEnumerable().Select(m => new Category()
+            {
+                Id = m.Field<int>("ID"),
+                Name = m.Field<string>("Name"),
+                DisplayOrder = m.Field<int>("DisplayOrder"),
+                CreatedDateTime = m.Field<DateTime>("CreatedDateTime")
+            }).ToList();
+
+            return View(catList);
         }
 
     }
